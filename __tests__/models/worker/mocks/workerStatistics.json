@@ -1,0 +1,16 @@
+{
+  "status": "OK",
+  "data": [
+    {
+      "worker": "rig1",
+      "time": 1520706600,
+      "lastSeen": 1520706471,
+      "reportedHashrate": 0,
+      "currentHashrate": 26666666.666666668,
+      "validShares": 24,
+      "invalidShares": 0,
+      "staleShares": 0,
+      "averageHashrate": 19765432.098765437
+    }
+  ]
+}
