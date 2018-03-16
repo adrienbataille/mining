@@ -13,7 +13,8 @@ describe('Miner Statistics', () => {
     const model = new MinerStatistics(data);
 
     expect(model).not.toBeFalsy();
-    expect(model.currentHashrate).not.toBeFalsy();
-    expect(model.averageHashrate).not.toBeFalsy();
+    expect(model.reportedHashrate).toBeDefined();
+    expect(model.currentHashrate).toBeDefined();
+    expect(model.averageHashrate).toBeDefined();
   });
 });

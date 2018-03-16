@@ -14,6 +14,7 @@ describe('Worker Statistics', () => {
 
     expect(model).not.toBeFalsy();
     expect(model.worker).toBeDefined();
+    expect(model.reportedHashrate).toBeDefined();
     expect(model.currentHashrate).toBeDefined();
     expect(model.averageHashrate).toBeDefined();
     expect(model.validShares).toBeDefined();
