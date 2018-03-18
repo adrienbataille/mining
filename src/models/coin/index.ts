@@ -1,5 +1,5 @@
-import Currency from './Currency';
+import CurrencyRecord from './CurrencyRecord';
 
 export {
-  Currency,
+  CurrencyRecord,
 };
