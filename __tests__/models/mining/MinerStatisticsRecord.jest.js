@@ -1,6 +1,6 @@
-import MinerStatisticsRecord from '../../../src/models/mining/MinerStatisticsRecord';
-import { minerStatisticsParser } from '../../../src/parsers/mining/minerStatisticsParser';
-import mockMinerStatistics from './mocks/minerStatisticsMock';
+import MinerStatisticsRecord from '../../../src/models/mining/MinerStatisticsRecord.ts';
+import { minerStatisticsParser } from '../../../src/parsers/mining/minerStatisticsParser.ts';
+import mockMinerStatistics from './mocks/minerStatisticsMock.json';
 
 describe('Miner Statistics', () => {
   it('can instanciate the model', () => {
@@ -12,7 +12,7 @@ describe('Miner Statistics', () => {
     expect(model.unpaid).toBeDefined();
 
     expect(model.statistics).toBeDefined();
-    expect(model.statistics.time).toBeDefined();
+    expect(model.statistics.lastUpdate).toBeDefined();
     expect(model.statistics.lastSeen).toBeDefined();
     expect(model.statistics.reportedHashrate).toBeDefined();
     expect(model.statistics.currentHashrate).toBeDefined();
@@ -32,7 +32,7 @@ describe('Miner Statistics', () => {
     expect(model.unpaid).toBeDefined();
 
     expect(model.statistics).toBeDefined();
-    expect(model.statistics.time).toBeDefined();
+    expect(model.statistics.lastUpdate).toBeDefined();
     expect(model.statistics.lastSeen).toBeDefined();
     expect(model.statistics.reportedHashrate).toBeDefined();
     expect(model.statistics.currentHashrate).toBeDefined();

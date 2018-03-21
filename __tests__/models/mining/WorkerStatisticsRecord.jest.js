@@ -1,6 +1,6 @@
-import WorkerStatisticsRecord from '../../../src/models/mining/WorkerStatisticsRecord';
-import { workerStatisticsParser } from '../../../src/parsers/mining/workerStatisticsParser';
-import mockWorkerStatistics from './mocks/workerStatisticsMock';
+import WorkerStatisticsRecord from '../../../src/models/mining/WorkerStatisticsRecord.ts';
+import { workerStatisticsParser } from '../../../src/parsers/mining/workerStatisticsParser.ts';
+import mockWorkerStatistics from './mocks/workerStatisticsMock.json';
 
 describe('Worker Statistics', () => {
   it('can instanciate the model', () => {
@@ -11,7 +11,7 @@ describe('Worker Statistics', () => {
     expect(model.worker).toBeDefined();
 
     expect(model.statistics).toBeDefined();
-    expect(model.statistics.time).toBeDefined();
+    expect(model.statistics.lastUpdate).toBeDefined();
     expect(model.statistics.lastSeen).toBeDefined();
     expect(model.statistics.reportedHashrate).toBeDefined();
     expect(model.statistics.currentHashrate).toBeDefined();
@@ -23,14 +23,14 @@ describe('Worker Statistics', () => {
 
   it('can instanciate the model from data', () => {
     const { data } = mockWorkerStatistics;
-    const model = new WorkerStatisticsRecord(workerStatisticsParser(data));
+    const model = new WorkerStatisticsRecord(workerStatisticsParser(data[0]));
 
     expect(model).not.toBeFalsy();
     expect(model.miner).toBeDefined();
     expect(model.worker).toBeDefined();
 
     expect(model.statistics).toBeDefined();
-    expect(model.statistics.time).toBeDefined();
+    expect(model.statistics.lastUpdate).toBeDefined();
     expect(model.statistics.lastSeen).toBeDefined();
     expect(model.statistics.reportedHashrate).toBeDefined();
     expect(model.statistics.currentHashrate).toBeDefined();
