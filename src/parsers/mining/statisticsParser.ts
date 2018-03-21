@@ -20,8 +20,8 @@ const statisticsParser = (data: {
   } = data;
 
   const obj = {
-    time,
-    lastSeen,
+    lastUpdate: new Date(time * 1000),
+    lastSeen: new Date(lastSeen * 1000),
     reportedHashrate,
     currentHashrate,
     averageHashrate,

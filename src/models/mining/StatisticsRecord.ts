@@ -1,8 +1,8 @@
-import { Record } from 'typed-immutable';
+import { Record, Maybe } from 'typed-immutable';
 
 const StatisticsRecord = Record({
-  time: Number(0),
-  lastSeen: Number(0),
+  lastUpdate: Maybe(Date),
+  lastSeen: Maybe(Date),
   reportedHashrate: Number(0),
   currentHashrate: Number(0),
   averageHashrate: Number(0),
@@ -12,8 +12,8 @@ const StatisticsRecord = Record({
 }, 'StatisticsRecord');
 
 class Statistics extends StatisticsRecord {
-  time: number;
-  lastSeen: number;
+  lastUpdate: Date;
+  lastSeen: Date;
   reportedHashrate: number;
   currentHashreate: number;
   averageHashrate: number;

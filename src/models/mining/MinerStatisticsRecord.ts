@@ -6,7 +6,7 @@ const MinerStatisticsRecord = Record({
   statistics: StatisticsRecord,
   activeWorkers: Number(0),
   unpaid: Number(0),
-}, 'MinerStatisticsRecord')
+}, 'MinerStatisticsRecord');
 
 class MinerStatistics extends MinerStatisticsRecord {
   miner: string;
