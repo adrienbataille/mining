@@ -5,35 +5,51 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "eslint --ext .js src/"
+    "lint": "eslint --ext .js src/ __tests__/"
   },
   "dependencies": {
+    "@types/react": "^16.0.40",
     "axios": "^0.18.0",
-    "react": "16.3.0-alpha.1",
-    "react-native": "0.54.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "^0.54.1",
+    "react-native-navigation": "^1.1.407",
     "react-native-typescript-transformer": "^1.2.3",
+    "react-navigation": "^1.5.2",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
     "typed-immutable": "^0.1.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.1",
     "babel-preset-react-native": "4.0.0",
     "eslint": "^4.18.2",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-typescript": "^1.0.2",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-typescript": "^0.10.0",
     "jest": "22.4.2",
     "react-test-renderer": "16.3.0-alpha.1",
-    "typescript-babel-jest": "^1.0.5"
+    "typescript": "^2.7.2",
+    "typescript-babel-jest": "^1.0.5",
+    "typescript-eslint-parser": "^14.0.0"
   },
   "jest": {
-
     "preset": "react-native",
     "testRegex": "__tests__/.*\\.jest\\.js$",
     "setupFiles": [
       "<rootDir>/__tests__/config/polyfills.js"
-    ],    "transform": {
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
       "^.+\\.js$": "babel-jest",
       "^.+\\.ts$": "typescript-babel-jest"
     }
