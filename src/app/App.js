@@ -32,9 +32,9 @@ const styles = StyleSheet.create({
   },
 });
 
+// eslint-disable-next-line react/prefer-stateless-function
 export default class App extends PureComponent {
   render() {
-    this.empty();
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
