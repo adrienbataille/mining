@@ -7,7 +7,6 @@ import App from '../src/app/App';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <App />
-  );
+  // eslint-disable-next-line no-unused-vars
+  const tree = renderer.create(<App />);
 });
